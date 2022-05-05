@@ -1,0 +1,335 @@
+*, html {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@-webkit-keyframes placeholdLoading {
+  from {
+    background-color: #cee0e6;
+  }
+  to {
+    background-color: #aad1de;
+  }
+}
+
+@keyframes placeholdLoading {
+  from {
+    background-color: #cee0e6;
+  }
+  to {
+    background-color: #aad1de;
+  }
+}
+
+.order-placeHolder.loading {
+  -webkit-animation: placeholdLoading 1s ease-in-out infinite alternate;
+  animation: placeholdLoading 1s ease-in-out infinite alternate;
+}
+
+.order-placeHolder, .Orders .Order {
+  background: #cee0e6;
+  width: 450px;
+  min-height: 100px;
+  padding: 20px;
+  margin-bottom: 25px;
+  float: left;
+  clear: both;
+}
+
+.orderPOVtitle, .pageTitle {
+  display: block;
+  float: left;
+  clear: both;
+  font-weight: bold;
+  font-size: .8125rem;
+  margin-bottom: 25px;
+}
+
+.orderPOVloader {
+  width: 25px;
+  margin-left: 10px;
+  float: left;
+}
+
+.OrderDetails {
+  float: left;
+}
+
+.OrderDetails span {
+  float: left;
+  clear: both;
+}
+
+.OrderDetails .Item_Title {
+  font-weight: bold;
+}
+
+button.pending {
+  background-image: url("../Assets/Images/button.gif");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 34px;
+}
+
+button.pending .btnTxt {
+  display: none;
+}
+
+.clrBth {
+  clear: both;
+}
+
+.guestWrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.guestWrapper .contents {
+  height: 100vh;
+  background-image: url("../Assets/Images/brickBackground.png");
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*@media (min-width: 992px) {
+            width: 50%;
+        }*/
+}
+
+.guestWrapper .contents .login, .guestWrapper .contents .forgot, .guestWrapper .contents .register, .guestWrapper .contents .recover {
+  width: 85%;
+  height: auto;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 20px;
+  padding-top: 60px;
+  background-color: #fff;
+  background-image: url("../Assets/Images/headerLogo.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 20px;
+}
+
+@media (min-width: 768px) {
+  .guestWrapper .contents .login, .guestWrapper .contents .forgot, .guestWrapper .contents .register, .guestWrapper .contents .recover {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .guestWrapper .contents .login, .guestWrapper .contents .forgot, .guestWrapper .contents .register, .guestWrapper .contents .recover {
+    width: 30%;
+  }
+}
+
+.guestWrapper .contents .login h1, .guestWrapper .contents .forgot h1, .guestWrapper .contents .register h1, .guestWrapper .contents .recover h1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.guestWrapper .contents .login .teaserTxt, .guestWrapper .contents .forgot .teaserTxt, .guestWrapper .contents .register .teaserTxt, .guestWrapper .contents .recover .teaserTxt {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: .8125rem;
+  font-weight: 300;
+}
+
+.guestWrapper .contents .login .guestForm, .guestWrapper .contents .forgot .guestForm, .guestWrapper .contents .register .guestForm, .guestWrapper .contents .recover .guestForm {
+  margin: 50px 0 30px;
+}
+
+.guestWrapper .contents .login .guestForm input, .guestWrapper .contents .login .guestForm textarea, .guestWrapper .contents .login .guestForm select, .guestWrapper .contents .forgot .guestForm input, .guestWrapper .contents .forgot .guestForm textarea, .guestWrapper .contents .forgot .guestForm select, .guestWrapper .contents .register .guestForm input, .guestWrapper .contents .register .guestForm textarea, .guestWrapper .contents .register .guestForm select, .guestWrapper .contents .recover .guestForm input, .guestWrapper .contents .recover .guestForm textarea, .guestWrapper .contents .recover .guestForm select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+}
+
+.guestWrapper .contents .login .guestForm button, .guestWrapper .contents .forgot .guestForm button, .guestWrapper .contents .register .guestForm button, .guestWrapper .contents .recover .guestForm button {
+  width: 100%;
+  height: 34px;
+  background-color: #5ae6a9;
+  color: #fff;
+  font-size: 1rem;
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.guestWrapper .contents .login .guestForm .errorMsg, .guestWrapper .contents .forgot .guestForm .errorMsg, .guestWrapper .contents .register .guestForm .errorMsg, .guestWrapper .contents .recover .guestForm .errorMsg {
+  color: #ff0000;
+  font-size: .8125rem;
+}
+
+.guestWrapper .contents .login .guestLink, .guestWrapper .contents .forgot .guestLink, .guestWrapper .contents .register .guestLink, .guestWrapper .contents .recover .guestLink {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: .8125rem;
+  display: block;
+  clear: both;
+  margin-top: 20px;
+}
+
+.guestWrapper .contents .login .guestLink a, .guestWrapper .contents .forgot .guestLink a, .guestWrapper .contents .register .guestLink a, .guestWrapper .contents .recover .guestLink a {
+  color: #5aa9e6;
+  text-decoration: underline;
+}
+
+.guestWrapper .teaserCard {
+  display: none;
+  position: absolute;
+  width: 50%;
+  left: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: green;
+}
+
+@media (min-width: 992px) {
+  .guestWrapper .teaserCard {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.guestWrapper .teaserCard #teaserImg {
+  width: 95%;
+  height: auto;
+}
+
+.mainWrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../Assets/Images/brickBackground.png");
+}
+
+.mainWrapper .topHeader {
+  width: calc(100% - 20px);
+  height: auto;
+  display: inline-block;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #52a0f7;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .mainWrapper .topHeader {
+    width: 990px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.mainWrapper .topHeader #Logo, .mainWrapper .topHeader #Logotxt {
+  float: left;
+}
+
+.mainWrapper .topHeader #Logotxt {
+  color: #e96fa1;
+  font-family: 'Courier New';
+  font-size: 1.125rem;
+  padding: 10px 0 0 10px;
+  font-weight: 700;
+}
+
+.mainWrapper .topHeader .rightNav {
+  width: auto;
+  position: absolute;
+  left: auto;
+  right: 0;
+  padding-top: 12px;
+}
+
+.mainWrapper .topHeader .rightNav .buttonWrapper {
+  display: block;
+  float: left;
+  font-size: .9rem;
+  background-color: #d8dfea;
+  border-color: #52a0f7;
+  border-style: solid;
+  border-width: 1px 2px;
+  padding: 8px;
+  margin-left: 8px;
+  border-radius: 4px;
+}
+
+.mainWrapper .topHeader .sideNav {
+  width: 100%;
+  height: calc(100% - 83px);
+  top: 83px;
+  left: 100%;
+  padding: 20px;
+  background: #52a0f7;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  position: fixed;
+  z-index: 1;
+}
+
+.mainWrapper .topHeader .sideNav.openNav {
+  left: 0%;
+}
+
+.mainWrapper .topHeader .sideNav .sideNavItem {
+  width: 100%;
+  padding: 15px 20px;
+  color: #fff;
+  border-bottom: 2px #fff solid;
+}
+
+.mainWrapper .mainContents {
+  width: calc(100% - 20px);
+  height: auto;
+  margin: 10px;
+  background: #fff;
+}
+
+@media (min-width: 992px) {
+  .mainWrapper .mainContents {
+    width: 990px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+.mainWrapper .mainContents .contentBox {
+  margin: 10px;
+  display: inline-block;
+}
+/*# sourceMappingURL=main.css.map */
