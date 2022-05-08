@@ -21,6 +21,42 @@ a {
   text-decoration: none;
 }
 
+button.submit {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  padding: 4px;
+  border: none;
+  margin-bottom: 4px;
+  background-color: #222;
+  display: block;
+}
+
+button.submit.green {
+  background-color: #5FA52E;
+}
+
+button.submit.blue {
+  background-color: #6EA7FB;
+}
+
+button.submit.pink {
+  background-color: #E275AA;
+}
+
+button.submit.grey {
+  background-color: #E0E0E0;
+  color: #222;
+}
+
+button.submit.grey.disabled {
+  color: #999;
+}
+
+button.submit.inlineBtn {
+  display: inline;
+}
+
 @-webkit-keyframes placeholdLoading {
   from {
     background-color: #cee0e6;
@@ -46,7 +82,7 @@ a {
 
 .order-placeHolder, .Orders .Order {
   background: #cee0e6;
-  width: 450px;
+  width: 550px;
   min-height: 100px;
   padding: 20px;
   margin-bottom: 25px;
@@ -233,7 +269,13 @@ button.pending .btnTxt {
 .mainWrapper {
   width: 100%;
   height: 100vh;
-  background-image: url("../Assets/Images/brickBackground.png");
+  background-color: #d8dfea;
+}
+
+@media (min-width: 992px) {
+  .mainWrapper {
+    background-image: url("../Assets/Images/brickBackground.png");
+  }
 }
 
 .mainWrapper .topHeader {
@@ -328,8 +370,19 @@ button.pending .btnTxt {
   }
 }
 
-.mainWrapper .mainContents .contentBox {
-  margin: 10px;
+.mainWrapper .mainContents .contentWrapper {
+  width: 100%;
+  margin-top: 10px;
   display: inline-block;
+}
+
+.mainWrapper .mainContents .contentWrapper .card-wrapper {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 10px #d8dfea solid;
+}
+
+.mainWrapper .mainContents .contentWrapper .card-wrapper:last-child {
+  border-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

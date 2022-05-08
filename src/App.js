@@ -3,6 +3,8 @@ import { GuestRoute } from './hoc/guest-route'
 import { PrivateRoute } from './hoc/private-route'
 
 import Home from './pages/Home'
+import ReadOrder from './pages/ReadOrder'
+
 import Login from './pages/Login'
 import Forgot from './pages/Forgot'
 import Register from './pages/Register'
@@ -18,6 +20,9 @@ function App() {
         <Routes>
           <Route exact path={domain+'/'} element={<PrivateRoute />}>
             <Route exact path={domain+'/'} element={<Home />}/>
+          </Route>
+          <Route exact path={domain+'/order/:orderId'} element={<PrivateRoute />}>
+            <Route exact path={domain+'/order/:orderId'} element={<ReadOrder />}/>
           </Route>
 
           <Route exact path={domain+'/login'} element={<GuestRoute />}>
